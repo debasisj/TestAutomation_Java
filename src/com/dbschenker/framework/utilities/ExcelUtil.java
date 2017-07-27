@@ -10,9 +10,9 @@ import java.util.Hashtable;
 
 public class ExcelUtil {
 
-    static Sheet wrksheet;
-    static Workbook wrkbook =null;
-    static Hashtable dict= new Hashtable();
+    private static Sheet wrksheet;
+    private static Workbook wrkbook =null;
+    private static Hashtable dict= new Hashtable();
     //Create a Constructor
     public ExcelUtil(String excelSheetPath, String sheetName) throws BiffException, IOException
     {
@@ -39,7 +39,7 @@ public class ExcelUtil {
     method overloading
          */
     public static String ReadCell(String columnName, int rowNum){
-        return ReadCell(columnName,rowNum);
+        return ReadCell(GetCell(columnName),rowNum);
     }
 
     //Create Column Dictionary to hold all the Column Names

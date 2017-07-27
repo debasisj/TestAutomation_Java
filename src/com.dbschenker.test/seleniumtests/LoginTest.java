@@ -22,7 +22,7 @@ public class LoginTest extends FrameworkInitialize{
         DriverContext.browser.goToUrl("http://auintratest01/mcwms_test/");
 
         try {
-            ExcelUtil util = new ExcelUtil("\\resource\\TestData.xls","LoginDetails");
+            ExcelUtil util = new ExcelUtil("C:\\Users\\djagadeb\\Source\\Repos\\TestAutomation_Java\\src\\resource\\TestData.xls","LoginDetails");
         } catch (BiffException e) {
             e.printStackTrace();
         } catch (IOException e) {
