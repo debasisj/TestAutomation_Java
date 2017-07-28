@@ -1,5 +1,6 @@
 package com.dbschenker.framework.base;
 
+import com.dbschenker.framework.config.Settings;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -11,7 +12,7 @@ public class FrameworkInitialize extends Base {
         switch (browsertype){
             case IE:
             {
-                System.setProperty("webdriver.ie.driver","C:\\Users\\djagadeb\\Source\\Repos\\MCWMS_TestAutomation\\packages\\Selenium.InternetExplorer.WebDriver.3.3\\driver\\IEDriverServer.exe");
+                System.setProperty("webdriver.ie.driver", Settings.IEDriverExePath);
                 driver = new InternetExplorerDriver();
             }
         }
