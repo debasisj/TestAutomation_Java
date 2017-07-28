@@ -1,6 +1,5 @@
 package seleniumtests;
 
-import com.dbschenker.framework.base.Browser;
 import com.dbschenker.framework.base.DriverContext;
 import com.dbschenker.framework.base.FrameworkInitialize;
 import com.dbschenker.framework.config.ConfigReader;
@@ -24,7 +23,7 @@ public class LoginTest extends FrameworkInitialize{
     @Before
     public void init() throws IOException, BiffException {
         ConfigReader.populateSettings();
-        initializeBrowser(Browser.browserType.IE);
+        initializeBrowser(Settings.BrowserType);
 
         DriverContext.browser.goToUrl(Settings.AUTBaseUrl);
         if(ReportUtil.getHtmlReporter()==null)ReportUtil.initReport();

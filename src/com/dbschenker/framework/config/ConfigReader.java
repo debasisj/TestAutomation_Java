@@ -1,5 +1,7 @@
 package com.dbschenker.framework.config;
 
+import com.dbschenker.framework.base.Browser;
+
 import java.io.IOException;
 import java.util.Properties;
 
@@ -19,5 +21,6 @@ public class ConfigReader {
         Settings.SQLServerJDBCClass = prop.getProperty("SQLServerJDBCClass");
         Settings.TestDataPath = prop.getProperty("TestDataPath");
         Settings.IEDriverExePath = prop.getProperty("IEDriverExePath");
+        Settings.BrowserType = Browser.browserType.valueOf(prop.getProperty("BrowserType"));
     }
 }
