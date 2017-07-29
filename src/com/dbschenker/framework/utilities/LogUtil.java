@@ -37,8 +37,11 @@ public class LogUtil {
 
     public void writeLog(String message){
         try {
-            bufferedWriter.write(message);
-            bufferedWriter.close();
+             formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy:HH:MM:SS");
+            String dateTime = date.format(formatter);
+            bufferedWriter.write(dateTime+": "+message);
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
